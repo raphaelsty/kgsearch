@@ -17,6 +17,16 @@ The `start` command starts the API and opens the user interface:
 kg start
 ```
 
+### ⭐️ Query
+
+KGSearch suggests performing multiple queries via the `;` separator.
+
+The query `france;germany;china` will be divided into three subqueries `france`, `germany`, and `china` to visualize the interactions between the entities of our choice.
+
+The "`Top K` field allows selecting the number of candidate entities retrieved by the search engine (1 by default).
+
+The `Neighbours` field selects the number of neighbors to be displayed (1 by default).
+
 ### 🤖 Custom KG
 
 We can add our graph to KGSearch via the command:
