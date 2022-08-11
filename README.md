@@ -1,7 +1,6 @@
 <div align="center">
   <h1>KGSearch</h1>
 </div>
-<br>
 
 ![](kgsearch.gif)
 
@@ -28,9 +27,9 @@ KGSearch suggests performing multiple queries via the `;` separator.
 
 The query `france;germany;china` will be divided into three subqueries `france`, `germany`, and `china` to visualize the interactions between the entities of our choice.
 
-The "`Top K` field allows selecting the number of candidate entities retrieved by the search engine (1 by default).
+The `top K` field allows selecting the number of candidate entities retrieved by the search engine (1 by default).
 
-The `Neighbours` field selects the number of neighbors to be displayed (1 by default).
+The `neighbours` field selects the number of neighbors to be displayed (1 by default).
 
 ## 🤖 Custom KG
 
