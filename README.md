@@ -25,7 +25,7 @@ We can add our graph to KGSearch via the command:
 kg add -f data.csv
 ```
 
-The graph must be saved in CSV format and structured as a triplet (head, relation, tail) with a comma separator and without column names. Here is an example of a compatible CSV file:
+The graph must be saved in CSV format and structured as triples (head, relation, tail) with a comma separator and without column names. Here is an example of a compatible CSV file:
 
 ```sh
 senegal,neighbor,gambia
