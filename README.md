@@ -43,4 +43,4 @@ If you have already started the application, you can reopen a window with the op
 kg open
 ```
 
-The library [Cherche](https://github.com/raphaelsty/cherche) provides the entity search engine. KGSearch relies on a local flask API. The user interface is developed in React and uses the [3D Force-Directed Graph] library (https://github.com/vasturiano/3d-force-graph).
+The library [Cherche](https://github.com/raphaelsty/cherche) provides the entity search engine. KGSearch relies on a local flask API. The user interface is developed in React and uses the [3D Force-Directed Graph](https://github.com/vasturiano/3d-force-graph) library.
