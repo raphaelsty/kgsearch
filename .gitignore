@@ -3,7 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-*.csv
 *.pkl
 
 *.DS_Store
