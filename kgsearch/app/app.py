@@ -77,6 +77,7 @@ class Search:
     def save(self, path):
         with open(path, "wb") as f:
             pickle.dump(self, f)
+        return self
 
     def __call__(self, query: str, k: int, n: int):
 
@@ -130,8 +131,14 @@ def create_app():
     @cross_origin()
     def get(k: int, n: int, query: str):
         path = pathlib.Path(__file__).parent.joinpath("./../data")
-        with open(os.path.join(path, "search.pkl"), "rb") as f:
-            search = pickle.load(f)
+
+        if os.path.exists(os.path.join(path, "search.pkl")):
+            with open(os.path.join(path, "search.pkl"), "rb") as f:
+                search = pickle.load(f)
+        else:
+            search = Search(file=os.path.join(path, "data.csv")).save(
+                os.path.join(path, "search.pkl")
+            )
 
         return json.dumps(search(query=query, k=int(k), n=int(n)))
 

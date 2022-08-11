@@ -27,7 +27,7 @@ setup(
             "web/style.css",
             "web/app.html",
             "web/network.js",
-            "data/.gitkeep",
+            "data/data.csv",
         ]
     },
     classifiers=[
