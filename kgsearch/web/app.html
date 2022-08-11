@@ -1,12 +1,163 @@
-<div id="backsearch"></div>
-
 <body>
-  <div class="graph" id="graph"></div>
-  <script type="text/jsx" src="network.js"></script>
-</body>
+  <div id="backsearch"></div>
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <div class="graph" id="graph"></div>
+</body>
+<script type="text/jsx">
+  class Search extends React.Component {
+      constructor(props) {
+          super(props);
+          this.state = { query: '', k: 1, n: 1 };
+          this.timer = null;
+          this.handleChangeText = this.handleChangeText.bind(this);
+          this.handleChangeTopK = this.handleChangeTopK.bind(this);
+          this.handleChangeNeighbours = this.handleChangeNeighbours.bind(this)
+      }
+
+      handlePlot = (query, k, n) => {
+        // Clears running timer and starts a new one each time the user types
+        clearTimeout(this.timer);
+        this.timer = setTimeout(() => {
+          plot(query, k, n);
+        }, 1000);
+      }
+
+      handleChangeText(event) {
+          this.setState({ query: event.target.value });
+          this.handlePlot(event.target.value, this.state.k, this.state.n)
+      }
+
+      handleChangeTopK(event) {
+          this.setState({ k: event.target.value });
+          this.handlePlot(this.state.query, event.target.value, this.state.n)
+      }
+
+      handleChangeNeighbours(event) {
+          this.setState({ n: event.target.value });
+          this.handlePlot(this.state.query, this.state.k, event.target.value)
+      }
+
+
+      render() {
+          return (
+              <React.Fragment>
+                  <input id="search" type="text" placeholder="Entity 1;Entity 2;Entity 3" value={this.state.text} onChange={this.handleChangeText} />
+                  <div id="label" class="label">Top K</div>
+                  <input id="number" type="number" value={this.state.k} onChange={this.handleChangeTopK} />
+                  <div id="label" class="label">Neighbours</div>
+                  <input id="number" type="number" value={this.state.n} onChange={this.handleChangeNeighbours} />
+              </React.Fragment>
+          );
+      }
+  }
+
+
+  const plot = function (query, k, n) {
+      fetch("http://127.0.0.1:5000/search/" + k.toString() + "/" + n.toString() + "/" + query).then(res => res.json()).then(data => {
+          ReactDOM.render(
+              <ForceGraph3D
+                  graphData={data}
+                  backgroundColor="#FFFFF0"
+                  nodeAutoColorBy="group"
+                  linkOpacity={0.5}
+                  linkWidth={0.8}
+                  linkResolution={10}
+                  linkDirectionalParticleColor={() => "#370028"}
+                  linkDirectionalParticles={1}
+                  linkDirectionalParticleWidth={1}
+                  linkDirectionalParticleResolution={8}
+
+                  linkColor="#565656"
+                  nodeThreeObject={node => {
+                      const sprite = new SpriteText(node.id);
+                      sprite.color = node.color;
+                      sprite.textHeight = 8;
+                      sprite.fontSize = 90;
+                      sprite.fontFace = "Futura";
+                      return sprite;
+
+                  }}
+              />,
+              document.getElementById('graph')
+          );
+      });
+  }
+
+  const root = ReactDOM.createRoot(document.getElementById('backsearch'));
+  root.render(<Search />);
+</script>
+
+
+<style>
+  body {
+    background-color: #FFFFF0;
+  }
+
+  #backsearch {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(250, 249, 246, 0.8);
+    width: 20%;
+    height: 20%;
+    margin: 3%;
+    box-shadow: rgba(183, 148, 217, 0.4) -5px 5px, rgba(183, 148, 217, 0.3) -10px 10px, rgba(183, 148, 217, 0.2) -15px 15px, rgba(183, 148, 217, 0.1) -20px 20px, rgba(183, 148, 217, 0.05) -25px 25px;
+  }
+
+  #search {
+    width: 80%;
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    font-family: 'Futura', sans-serif;
+    font-weight: bolder;
+    font-size: small;
+    color: rgb(105, 105, 105, 0.8);
+    padding-left: 3%;
+  }
+
+  #number {
+    width: 20%;
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+    font-family: 'Futura', sans-serif;
+    font-weight: bolder;
+    font-size: small;
+    color: rgb(105, 105, 105, 0.8);
+    padding-left: 3%;
+  }
+
+  .search_label {
+    width: 80%;
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+  }
+
+  .label {
+    font-family: 'Futura', sans-serif;
+    font-weight: bolder;
+    font-size: large;
+    color: rgba(183, 148, 217, 0.4);
+    width: 80%;
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+
+  }
+</style>
+<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <script src="http://unpkg.com/react/umd/react.production.min.js"></script>
 <script src="http://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
 <script src="http://unpkg.com/babel-standalone"></script>

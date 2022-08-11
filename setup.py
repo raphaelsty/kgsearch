@@ -24,9 +24,7 @@ setup(
     url="https://github.com/raphaelsty/kgsearch",
     package_data={
         "kgsearch": [
-            "web/style.css",
             "web/app.html",
-            "web/network.js",
             "data/data.csv",
         ]
     },
