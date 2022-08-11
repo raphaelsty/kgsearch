@@ -2,5 +2,5 @@ click == 8.0.1
 Flask == 2.0.1
 Flask-Cors == 3.0.10
 requests == 2.27.1
-rich == 10.1.0
 cherche == 0.1.0
+pandas >= 1.4.2
