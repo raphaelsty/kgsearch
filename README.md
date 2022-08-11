@@ -1,6 +1,6 @@
 # KGSearch
 
-KGSearch is a minimalist tool for searching and viewing entities in a graph and is dedicated to a local environment. The application provides a Python client with three distinct terminal commands: `add, start, open`. The application default proposes to search the knowledge graph [Countries](https://www.aaai.org/ocs/index.php/SSS/SSS15/paper/view/10257/10026). You can explore the borders we must cross to get from one country to another and see how small the world is.
+KGSearch is a minimalist tool for searching and viewing entities in a graph and is dedicated to a local environment. The application provides a Python client with three distinct terminal commands: `add, start, open`. The application default proposes to search through the knowledge graph [Countries](https://www.aaai.org/ocs/index.php/SSS/SSS15/paper/view/10257/10026). You can explore the borders we must cross to get from one country to another and see how small the 🌍 is.
 
 ![](kgsearch.gif)
 
@@ -8,7 +8,7 @@ KGSearch is a minimalist tool for searching and viewing entities in a graph and 
 pip install git+https://github.com/raphaelsty/kgsearch
 ```
 
-## Quick Start
+### ✅ Quick Start
 
 The `start` command starts the API and opens the user interface:
 
@@ -17,7 +17,7 @@ The `start` command starts the API and opens the user interface:
 kg start
 ```
 
-## Custom KG
+### 🤖 Custom KG
 
 We can add our graph to KGSearch via the command:
 
@@ -35,7 +35,7 @@ senegal,neighbor,guinea-bissau
 senegal,neighbor,guinea
 ```
 
-## Notes
+### 📑 Notes
 
 If you have already started the application, you can reopen a window with the open command:
 
