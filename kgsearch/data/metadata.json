@@ -1,0 +1,500 @@
+{
+    "slovakia": {
+        "url": "https://en.wikipedia.org/wiki/slovakia"
+    },
+    "niger": {
+        "url": "https://en.wikipedia.org/wiki/niger"
+    },
+    "morocco": {
+        "url": "https://en.wikipedia.org/wiki/morocco"
+    },
+    "senegal": {
+        "url": "https://en.wikipedia.org/wiki/senegal"
+    },
+    "equatorial_guinea": {
+        "url": "https://en.wikipedia.org/wiki/equatorial_guinea"
+    },
+    "gibraltar": {
+        "url": "https://en.wikipedia.org/wiki/gibraltar"
+    },
+    "liechtenstein": {
+        "url": "https://en.wikipedia.org/wiki/liechtenstein"
+    },
+    "venezuela": {
+        "url": "https://en.wikipedia.org/wiki/venezuela"
+    },
+    "afghanistan": {
+        "url": "https://en.wikipedia.org/wiki/afghanistan"
+    },
+    "greece": {
+        "url": "https://en.wikipedia.org/wiki/greece"
+    },
+    "qatar": {
+        "url": "https://en.wikipedia.org/wiki/qatar"
+    },
+    "ecuador": {
+        "url": "https://en.wikipedia.org/wiki/ecuador"
+    },
+    "yemen": {
+        "url": "https://en.wikipedia.org/wiki/yemen"
+    },
+    "namibia": {
+        "url": "https://en.wikipedia.org/wiki/namibia"
+    },
+    "hong_kong": {
+        "url": "https://en.wikipedia.org/wiki/hong_kong"
+    },
+    "paraguay": {
+        "url": "https://en.wikipedia.org/wiki/paraguay"
+    },
+    "india": {
+        "url": "https://en.wikipedia.org/wiki/india"
+    },
+    "croatia": {
+        "url": "https://en.wikipedia.org/wiki/croatia"
+    },
+    "ethiopia": {
+        "url": "https://en.wikipedia.org/wiki/ethiopia"
+    },
+    "republic_of_the_congo": {
+        "url": "https://en.wikipedia.org/wiki/republic_of_the_congo"
+    },
+    "malaysia": {
+        "url": "https://en.wikipedia.org/wiki/malaysia"
+    },
+    "latvia": {
+        "url": "https://en.wikipedia.org/wiki/latvia"
+    },
+    "algeria": {
+        "url": "https://en.wikipedia.org/wiki/algeria"
+    },
+    "eritrea": {
+        "url": "https://en.wikipedia.org/wiki/eritrea"
+    },
+    "bhutan": {
+        "url": "https://en.wikipedia.org/wiki/bhutan"
+    },
+    "vatican_city": {
+        "url": "https://en.wikipedia.org/wiki/vatican_city"
+    },
+    "saint_martin": {
+        "url": "https://en.wikipedia.org/wiki/saint_martin"
+    },
+    "mali": {
+        "url": "https://en.wikipedia.org/wiki/mali"
+    },
+    "mauritania": {
+        "url": "https://en.wikipedia.org/wiki/mauritania"
+    },
+    "netherlands": {
+        "url": "https://en.wikipedia.org/wiki/netherlands"
+    },
+    "swaziland": {
+        "url": "https://en.wikipedia.org/wiki/swaziland"
+    },
+    "macau": {
+        "url": "https://en.wikipedia.org/wiki/macau"
+    },
+    "lesotho": {
+        "url": "https://en.wikipedia.org/wiki/lesotho"
+    },
+    "czechia": {
+        "url": "https://en.wikipedia.org/wiki/czechia"
+    },
+    "monaco": {
+        "url": "https://en.wikipedia.org/wiki/monaco"
+    },
+    "gabon": {
+        "url": "https://en.wikipedia.org/wiki/gabon"
+    },
+    "brazil": {
+        "url": "https://en.wikipedia.org/wiki/brazil"
+    },
+    "botswana": {
+        "url": "https://en.wikipedia.org/wiki/botswana"
+    },
+    "uzbekistan": {
+        "url": "https://en.wikipedia.org/wiki/uzbekistan"
+    },
+    "united_kingdom": {
+        "url": "https://en.wikipedia.org/wiki/united_kingdom"
+    },
+    "papua_new_guinea": {
+        "url": "https://en.wikipedia.org/wiki/papua_new_guinea"
+    },
+    "moldova": {
+        "url": "https://en.wikipedia.org/wiki/moldova"
+    },
+    "chile": {
+        "url": "https://en.wikipedia.org/wiki/chile"
+    },
+    "kazakhstan": {
+        "url": "https://en.wikipedia.org/wiki/kazakhstan"
+    },
+    "mozambique": {
+        "url": "https://en.wikipedia.org/wiki/mozambique"
+    },
+    "guinea-bissau": {
+        "url": "https://en.wikipedia.org/wiki/guinea-bissau"
+    },
+    "bangladesh": {
+        "url": "https://en.wikipedia.org/wiki/bangladesh"
+    },
+    "tunisia": {
+        "url": "https://en.wikipedia.org/wiki/tunisia"
+    },
+    "haiti": {
+        "url": "https://en.wikipedia.org/wiki/haiti"
+    },
+    "bolivia": {
+        "url": "https://en.wikipedia.org/wiki/bolivia"
+    },
+    "nigeria": {
+        "url": "https://en.wikipedia.org/wiki/nigeria"
+    },
+    "nepal": {
+        "url": "https://en.wikipedia.org/wiki/nepal"
+    },
+    "estonia": {
+        "url": "https://en.wikipedia.org/wiki/estonia"
+    },
+    "cameroon": {
+        "url": "https://en.wikipedia.org/wiki/cameroon"
+    },
+    "south_korea": {
+        "url": "https://en.wikipedia.org/wiki/south_korea"
+    },
+    "palestine": {
+        "url": "https://en.wikipedia.org/wiki/palestine"
+    },
+    "austria": {
+        "url": "https://en.wikipedia.org/wiki/austria"
+    },
+    "benin": {
+        "url": "https://en.wikipedia.org/wiki/benin"
+    },
+    "burkina_faso": {
+        "url": "https://en.wikipedia.org/wiki/burkina_faso"
+    },
+    "france": {
+        "url": "https://en.wikipedia.org/wiki/france"
+    },
+    "uganda": {
+        "url": "https://en.wikipedia.org/wiki/uganda"
+    },
+    "guinea": {
+        "url": "https://en.wikipedia.org/wiki/guinea"
+    },
+    "kyrgyzstan": {
+        "url": "https://en.wikipedia.org/wiki/kyrgyzstan"
+    },
+    "ivory_coast": {
+        "url": "https://en.wikipedia.org/wiki/ivory_coast"
+    },
+    "zambia": {
+        "url": "https://en.wikipedia.org/wiki/zambia"
+    },
+    "bosnia_and_herzegovina": {
+        "url": "https://en.wikipedia.org/wiki/bosnia_and_herzegovina"
+    },
+    "germany": {
+        "url": "https://en.wikipedia.org/wiki/germany"
+    },
+    "iraq": {
+        "url": "https://en.wikipedia.org/wiki/iraq"
+    },
+    "albania": {
+        "url": "https://en.wikipedia.org/wiki/albania"
+    },
+    "guyana": {
+        "url": "https://en.wikipedia.org/wiki/guyana"
+    },
+    "suriname": {
+        "url": "https://en.wikipedia.org/wiki/suriname"
+    },
+    "montenegro": {
+        "url": "https://en.wikipedia.org/wiki/montenegro"
+    },
+    "poland": {
+        "url": "https://en.wikipedia.org/wiki/poland"
+    },
+    "lebanon": {
+        "url": "https://en.wikipedia.org/wiki/lebanon"
+    },
+    "sweden": {
+        "url": "https://en.wikipedia.org/wiki/sweden"
+    },
+    "switzerland": {
+        "url": "https://en.wikipedia.org/wiki/switzerland"
+    },
+    "mexico": {
+        "url": "https://en.wikipedia.org/wiki/mexico"
+    },
+    "guatemala": {
+        "url": "https://en.wikipedia.org/wiki/guatemala"
+    },
+    "argentina": {
+        "url": "https://en.wikipedia.org/wiki/argentina"
+    },
+    "rwanda": {
+        "url": "https://en.wikipedia.org/wiki/rwanda"
+    },
+    "cyprus": {
+        "url": "https://en.wikipedia.org/wiki/cyprus"
+    },
+    "mongolia": {
+        "url": "https://en.wikipedia.org/wiki/mongolia"
+    },
+    "zimbabwe": {
+        "url": "https://en.wikipedia.org/wiki/zimbabwe"
+    },
+    "canada": {
+        "url": "https://en.wikipedia.org/wiki/canada"
+    },
+    "dr_congo": {
+        "url": "https://en.wikipedia.org/wiki/dr_congo"
+    },
+    "kosovo": {
+        "url": "https://en.wikipedia.org/wiki/kosovo"
+    },
+    "south_sudan": {
+        "url": "https://en.wikipedia.org/wiki/south_sudan"
+    },
+    "vietnam": {
+        "url": "https://en.wikipedia.org/wiki/vietnam"
+    },
+    "luxembourg": {
+        "url": "https://en.wikipedia.org/wiki/luxembourg"
+    },
+    "ghana": {
+        "url": "https://en.wikipedia.org/wiki/ghana"
+    },
+    "tajikistan": {
+        "url": "https://en.wikipedia.org/wiki/tajikistan"
+    },
+    "malawi": {
+        "url": "https://en.wikipedia.org/wiki/malawi"
+    },
+    "burundi": {
+        "url": "https://en.wikipedia.org/wiki/burundi"
+    },
+    "kenya": {
+        "url": "https://en.wikipedia.org/wiki/kenya"
+    },
+    "iran": {
+        "url": "https://en.wikipedia.org/wiki/iran"
+    },
+    "italy": {
+        "url": "https://en.wikipedia.org/wiki/italy"
+    },
+    "united_arab_emirates": {
+        "url": "https://en.wikipedia.org/wiki/united_arab_emirates"
+    },
+    "nicaragua": {
+        "url": "https://en.wikipedia.org/wiki/nicaragua"
+    },
+    "andorra": {
+        "url": "https://en.wikipedia.org/wiki/andorra"
+    },
+    "honduras": {
+        "url": "https://en.wikipedia.org/wiki/honduras"
+    },
+    "central_african_republic": {
+        "url": "https://en.wikipedia.org/wiki/central_african_republic"
+    },
+    "kuwait": {
+        "url": "https://en.wikipedia.org/wiki/kuwait"
+    },
+    "bulgaria": {
+        "url": "https://en.wikipedia.org/wiki/bulgaria"
+    },
+    "thailand": {
+        "url": "https://en.wikipedia.org/wiki/thailand"
+    },
+    "somalia": {
+        "url": "https://en.wikipedia.org/wiki/somalia"
+    },
+    "chad": {
+        "url": "https://en.wikipedia.org/wiki/chad"
+    },
+    "saudi_arabia": {
+        "url": "https://en.wikipedia.org/wiki/saudi_arabia"
+    },
+    "azerbaijan": {
+        "url": "https://en.wikipedia.org/wiki/azerbaijan"
+    },
+    "peru": {
+        "url": "https://en.wikipedia.org/wiki/peru"
+    },
+    "ukraine": {
+        "url": "https://en.wikipedia.org/wiki/ukraine"
+    },
+    "pakistan": {
+        "url": "https://en.wikipedia.org/wiki/pakistan"
+    },
+    "armenia": {
+        "url": "https://en.wikipedia.org/wiki/armenia"
+    },
+    "lithuania": {
+        "url": "https://en.wikipedia.org/wiki/lithuania"
+    },
+    "slovenia": {
+        "url": "https://en.wikipedia.org/wiki/slovenia"
+    },
+    "macedonia": {
+        "url": "https://en.wikipedia.org/wiki/macedonia"
+    },
+    "serbia": {
+        "url": "https://en.wikipedia.org/wiki/serbia"
+    },
+    "russia": {
+        "url": "https://en.wikipedia.org/wiki/russia"
+    },
+    "north_korea": {
+        "url": "https://en.wikipedia.org/wiki/north_korea"
+    },
+    "syria": {
+        "url": "https://en.wikipedia.org/wiki/syria"
+    },
+    "timor-leste": {
+        "url": "https://en.wikipedia.org/wiki/timor-leste"
+    },
+    "georgia": {
+        "url": "https://en.wikipedia.org/wiki/georgia"
+    },
+    "finland": {
+        "url": "https://en.wikipedia.org/wiki/finland"
+    },
+    "laos": {
+        "url": "https://en.wikipedia.org/wiki/laos"
+    },
+    "colombia": {
+        "url": "https://en.wikipedia.org/wiki/colombia"
+    },
+    "egypt": {
+        "url": "https://en.wikipedia.org/wiki/egypt"
+    },
+    "china": {
+        "url": "https://en.wikipedia.org/wiki/china"
+    },
+    "jordan": {
+        "url": "https://en.wikipedia.org/wiki/jordan"
+    },
+    "costa_rica": {
+        "url": "https://en.wikipedia.org/wiki/costa_rica"
+    },
+    "sudan": {
+        "url": "https://en.wikipedia.org/wiki/sudan"
+    },
+    "sierra_leone": {
+        "url": "https://en.wikipedia.org/wiki/sierra_leone"
+    },
+    "hungary": {
+        "url": "https://en.wikipedia.org/wiki/hungary"
+    },
+    "spain": {
+        "url": "https://en.wikipedia.org/wiki/spain"
+    },
+    "libya": {
+        "url": "https://en.wikipedia.org/wiki/libya"
+    },
+    "western_sahara": {
+        "url": "https://en.wikipedia.org/wiki/western_sahara"
+    },
+    "gambia": {
+        "url": "https://en.wikipedia.org/wiki/gambia"
+    },
+    "turkmenistan": {
+        "url": "https://en.wikipedia.org/wiki/turkmenistan"
+    },
+    "turkey": {
+        "url": "https://en.wikipedia.org/wiki/turkey"
+    },
+    "oman": {
+        "url": "https://en.wikipedia.org/wiki/oman"
+    },
+    "south_africa": {
+        "url": "https://en.wikipedia.org/wiki/south_africa"
+    },
+    "angola": {
+        "url": "https://en.wikipedia.org/wiki/angola"
+    },
+    "myanmar": {
+        "url": "https://en.wikipedia.org/wiki/myanmar"
+    },
+    "sri_lanka": {
+        "url": "https://en.wikipedia.org/wiki/sri_lanka"
+    },
+    "djibouti": {
+        "url": "https://en.wikipedia.org/wiki/djibouti"
+    },
+    "brunei": {
+        "url": "https://en.wikipedia.org/wiki/brunei"
+    },
+    "indonesia": {
+        "url": "https://en.wikipedia.org/wiki/indonesia"
+    },
+    "belarus": {
+        "url": "https://en.wikipedia.org/wiki/belarus"
+    },
+    "sint_maarten": {
+        "url": "https://en.wikipedia.org/wiki/sint_maarten"
+    },
+    "belgium": {
+        "url": "https://en.wikipedia.org/wiki/belgium"
+    },
+    "uruguay": {
+        "url": "https://en.wikipedia.org/wiki/uruguay"
+    },
+    "french_guiana": {
+        "url": "https://en.wikipedia.org/wiki/french_guiana"
+    },
+    "ireland": {
+        "url": "https://en.wikipedia.org/wiki/ireland"
+    },
+    "romania": {
+        "url": "https://en.wikipedia.org/wiki/romania"
+    },
+    "tanzania": {
+        "url": "https://en.wikipedia.org/wiki/tanzania"
+    },
+    "dominican_republic": {
+        "url": "https://en.wikipedia.org/wiki/dominican_republic"
+    },
+    "israel": {
+        "url": "https://en.wikipedia.org/wiki/israel"
+    },
+    "togo": {
+        "url": "https://en.wikipedia.org/wiki/togo"
+    },
+    "liberia": {
+        "url": "https://en.wikipedia.org/wiki/liberia"
+    },
+    "denmark": {
+        "url": "https://en.wikipedia.org/wiki/denmark"
+    },
+    "norway": {
+        "url": "https://en.wikipedia.org/wiki/norway"
+    },
+    "united_states": {
+        "url": "https://en.wikipedia.org/wiki/united_states"
+    },
+    "belize": {
+        "url": "https://en.wikipedia.org/wiki/belize"
+    },
+    "el_salvador": {
+        "url": "https://en.wikipedia.org/wiki/el_salvador"
+    },
+    "cambodia": {
+        "url": "https://en.wikipedia.org/wiki/cambodia"
+    },
+    "san_marino": {
+        "url": "https://en.wikipedia.org/wiki/san_marino"
+    },
+    "panama": {
+        "url": "https://en.wikipedia.org/wiki/panama"
+    },
+    "portugal": {
+        "url": "https://en.wikipedia.org/wiki/portugal"
+    }
+}

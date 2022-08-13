@@ -1,0 +1,120 @@
+body {
+    background-color: #FFFFF0;
+}
+
+#backsearch {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(250, 249, 246, 0.8);
+    width: 20%;
+
+    margin: 3%;
+    box-shadow: rgba(183, 148, 217, 0.4) -5px 5px, rgba(183, 148, 217, 0.3) -10px 10px, rgba(183, 148, 217, 0.2) -15px 15px, rgba(183, 148, 217, 0.1) -20px 20px, rgba(183, 148, 217, 0.05) -25px 25px;
+}
+
+#search {
+    width: 80%;
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: 'Futura', sans-serif;
+    font-weight: bolder;
+    font-size: small;
+    color: rgb(105, 105, 105, 0.8);
+    padding-left: 3%;
+}
+
+#number {
+    width: 20%;
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    font-family: 'Futura', sans-serif;
+    font-weight: bolder;
+    font-size: small;
+    color: rgb(105, 105, 105, 0.8);
+    padding-left: 3%;
+}
+
+.search_label {
+    width: 80%;
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+
+.label {
+    font-family: 'Futura', sans-serif;
+    font-weight: bolder;
+    font-size: large;
+    color: rgba(183, 148, 217, 0.4);
+    width: 80%;
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+}
+
+#metadata {
+    position: fixed;
+    display: block;
+    opacity: 1;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    background-color: rgb(250, 249, 246, 0.1);
+    width: 20%;
+    margin-top: 3%;
+    margin-right: 3%;
+}
+
+#field {
+    font-family: 'Futura', sans-serif;
+    font-weight: bold;
+    font-size: small;
+    color: rgb(105, 105, 105, 0.8);
+    width: 80%;
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    overflow-wrap: break-word;
+}
+
+#content {
+    font-family: 'Futura', sans-serif;
+    font-weight: normal;
+    font-size: small;
+    color: rgb(105, 105, 105, 0.8);
+    width: 80%;
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow-wrap: break-word;
+    margin-bottom: 5%;
+}
+
+#title {
+    font-family: 'Futura', sans-serif;
+    font-weight: normal;
+    font-size: large;
+    color: rgb(105, 105, 105, 0.8);
+    width: 80%;
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    overflow-wrap: break-word;
+}

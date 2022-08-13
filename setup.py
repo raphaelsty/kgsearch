@@ -16,12 +16,7 @@ setup(
     long_description_content_type="text/markdown",
     license="BSD-3",
     url="https://github.com/raphaelsty/kgsearch",
-    package_data={
-        "kgsearch": [
-            "web/app.html",
-            "data/data.csv",
-        ]
-    },
+    package_data={"kgsearch": ["web/app.html", "data/data.csv", "data/metadata.json"]},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

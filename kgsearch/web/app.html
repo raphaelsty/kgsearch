@@ -1,162 +1,144 @@
 <body>
+
+  <div id="info"></div>
+
   <div id="backsearch"></div>
 
   <div class="graph" id="graph"></div>
 </body>
+
 <script type="text/jsx">
   class Search extends React.Component {
-      constructor(props) {
-          super(props);
-          this.state = { query: '', k: 1, n: 1 };
-          this.timer = null;
-          this.handleChangeText = this.handleChangeText.bind(this);
-          this.handleChangeTopK = this.handleChangeTopK.bind(this);
-          this.handleChangeNeighbours = this.handleChangeNeighbours.bind(this)
-      }
+    constructor(props) {
+        super(props);
+        this.state = { query: '', k: 1, n: 1, p: 1, metadata: null, opacity: 0 };
+        this.timer = null;
+        this.handleChangeText = this.handleChangeText.bind(this);
+        this.handleChangeTopK = this.handleChangeTopK.bind(this);
+        this.handleChangeNeighbours = this.handleChangeNeighbours.bind(this)
+        this.handleChangePrune = this.handleChangePrune.bind(this)
+        this.plot = this.plot.bind(this)
+    }
 
-      handlePlot = (query, k, n) => {
+    handlePlot = (query, k, n, p) => {
         // Clears running timer and starts a new one each time the user types
         clearTimeout(this.timer);
         this.timer = setTimeout(() => {
-          plot(query, k, n);
+            this.plot(query, k, n, p);
         }, 1000);
-      }
+    }
 
-      handleChangeText(event) {
-          this.setState({ query: event.target.value });
-          this.handlePlot(event.target.value, this.state.k, this.state.n)
-      }
+    handleChangeText(event) {
+        this.setState({ query: event.target.value });
+        this.handlePlot(event.target.value, this.state.k, this.state.n, this.state.p)
+    }
 
-      handleChangeTopK(event) {
-          this.setState({ k: event.target.value });
-          this.handlePlot(this.state.query, event.target.value, this.state.n)
-      }
+    handleChangeTopK(event) {
+        this.setState({ k: event.target.value });
+        this.handlePlot(this.state.query, event.target.value, this.state.n, this.state.p)
+    }
 
-      handleChangeNeighbours(event) {
-          this.setState({ n: event.target.value });
-          this.handlePlot(this.state.query, this.state.k, event.target.value)
-      }
+    handleChangeNeighbours(event) {
+        this.setState({ n: event.target.value });
+        this.handlePlot(this.state.query, this.state.k, event.target.value, this.state.p)
+    }
 
+    handleChangePrune(event) {
+        this.setState({ p: event.target.value });
+        this.handlePlot(this.state.query, this.state.k, this.state.n, event.target.value)
+    }
 
-      render() {
-          return (
-              <React.Fragment>
-                  <input id="search" type="text" placeholder="Entity 1;Entity 2;Entity 3" value={this.state.text} onChange={this.handleChangeText} />
-                  <div id="label" class="label">Top K</div>
-                  <input id="number" type="number" value={this.state.k} onChange={this.handleChangeTopK} />
-                  <div id="label" class="label">Neighbours</div>
-                  <input id="number" type="number" value={this.state.n} onChange={this.handleChangeNeighbours} />
-              </React.Fragment>
-          );
-      }
+    handleClickNode(node) {
+        if (node !== null) {
+            ReactDOM.render(
+                <div id="metadata">
+                    <div id="title">{node.id}</div>
+                    {Object.entries(node.metadata).map((field, _) => <div><div id="field">{field[0]}:</div><div id="content">{isURL(field[1])}</div></div>)}
+                </div>,
+                document.getElementById('info')
+            );
+
+        }
+    }
+
+    plot(query, k, n, p) {
+        fetch("http://127.0.0.1:5000/search/" + k.toString() + "/" + n.toString() + "/" + p.toString() + "/" + query).then(res => res.json()).then(data => {
+            ReactDOM.render(
+                <ForceGraph3D
+                    graphData={data}
+                    backgroundColor="#FFFFF0"
+                    nodeAutoColorBy="group"
+                    linkOpacity={0.5}
+                    linkWidth={0.5}
+                    linkResolution={10}
+                    linkDirectionalParticleColor={() => "#370028"}
+                    linkDirectionalParticles={1}
+                    linkDirectionalParticleWidth={0.5}
+                    linkDirectionalParticleResolution={8}
+                    linkColor="#565656"
+
+                    linkThreeObjectExtend={true}
+                    linkThreeObject={link => {
+                        // extend link with text sprite
+                        const sprite = new SpriteText(`${link.relation}`);
+                        sprite.color = '#c5c5c5';
+                        sprite.textHeight = 3;
+                        sprite.fontSize = 60;
+                        sprite.fontFace = "Helvetica";
+                        return sprite;
+                    }}
+                    linkPositionUpdate={(sprite, { start, end }) => {
+                        const middlePos = Object.assign(...['x', 'y', 'z'].map(c => ({
+                            [c]: start[c] + (end[c] - start[c]) / 2 // calc middle point
+                        })));
+                        // Position sprite
+                        Object.assign(sprite.position, middlePos);
+                    }}
+                    nodeThreeObject={node => {
+                        const sprite = new SpriteText(node.id);
+                        sprite.color = node.color;
+                        sprite.textHeight = 8;
+                        sprite.fontSize = 90;
+                        sprite.fontFace = "Futura";
+                        return sprite;
+
+                    }}
+                    onNodeHover={node => { this.handleClickNode(node) }}
+                />,
+                document.getElementById('graph')
+            );
+        });
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                <input id="search" type="text" placeholder="Entity 1;Entity 2;Entity 3" value={this.state.text} onChange={this.handleChangeText} />
+                <div id="label" class="label">Top K</div>
+                <input id="number" type="number" value={this.state.k} onChange={this.handleChangeTopK} />
+                <div id="label" class="label">Neighbours</div>
+                <input id="number" type="number" value={this.state.n} onChange={this.handleChangeNeighbours} />
+                <div id="label" class="label">Prune</div>
+                <input id="number" type="number" value={this.state.p} onChange={this.handleChangePrune} />
+            </React.Fragment>
+        );
+    }
+}
+
+function isURL(str) {
+  var regex = /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+  if(!regex .test(str)) {
+    return str;
+  } else {
+    return <a href={str}>{str}</a>;
   }
+}
 
+const root = ReactDOM.createRoot(document.getElementById('backsearch'));
+root.render(<Search />);
 
-  const plot = function (query, k, n) {
-      fetch("http://127.0.0.1:5000/search/" + k.toString() + "/" + n.toString() + "/" + query).then(res => res.json()).then(data => {
-          ReactDOM.render(
-              <ForceGraph3D
-                  graphData={data}
-                  backgroundColor="#FFFFF0"
-                  nodeAutoColorBy="group"
-                  linkOpacity={0.5}
-                  linkWidth={0.8}
-                  linkResolution={10}
-                  linkDirectionalParticleColor={() => "#370028"}
-                  linkDirectionalParticles={1}
-                  linkDirectionalParticleWidth={1}
-                  linkDirectionalParticleResolution={8}
-
-                  linkColor="#565656"
-                  nodeThreeObject={node => {
-                      const sprite = new SpriteText(node.id);
-                      sprite.color = node.color;
-                      sprite.textHeight = 8;
-                      sprite.fontSize = 90;
-                      sprite.fontFace = "Futura";
-                      return sprite;
-
-                  }}
-              />,
-              document.getElementById('graph')
-          );
-      });
-  }
-
-  const root = ReactDOM.createRoot(document.getElementById('backsearch'));
-  root.render(<Search />);
 </script>
-
-
-<style>
-  body {
-    background-color: #FFFFF0;
-  }
-
-  #backsearch {
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    background-color: rgb(250, 249, 246, 0.8);
-    width: 20%;
-    height: 20%;
-    margin: 3%;
-    box-shadow: rgba(183, 148, 217, 0.4) -5px 5px, rgba(183, 148, 217, 0.3) -10px 10px, rgba(183, 148, 217, 0.2) -15px 15px, rgba(183, 148, 217, 0.1) -20px 20px, rgba(183, 148, 217, 0.05) -25px 25px;
-  }
-
-  #search {
-    width: 80%;
-    position: flex;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5%;
-    margin-bottom: 2%;
-    font-family: 'Futura', sans-serif;
-    font-weight: bolder;
-    font-size: small;
-    color: rgb(105, 105, 105, 0.8);
-    padding-left: 3%;
-  }
-
-  #number {
-    width: 20%;
-    position: flex;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 0%;
-    margin-bottom: 2%;
-    font-family: 'Futura', sans-serif;
-    font-weight: bolder;
-    font-size: small;
-    color: rgb(105, 105, 105, 0.8);
-    padding-left: 3%;
-  }
-
-  .search_label {
-    width: 80%;
-    position: flex;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-
-  }
-
-  .label {
-    font-family: 'Futura', sans-serif;
-    font-weight: bolder;
-    font-size: large;
-    color: rgba(183, 148, 217, 0.4);
-    width: 80%;
-    position: flex;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 1%;
-    margin-bottom: 2%;
-
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <script src="http://unpkg.com/react/umd/react.production.min.js"></script>
 <script src="http://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>

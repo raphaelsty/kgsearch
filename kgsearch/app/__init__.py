@@ -1,3 +1,3 @@
-from .app import Search, create_app
+from .app import Search, create_app, save_metadata
 
-__all__ = ["Search", "create_app"]
+__all__ = ["Search", "create_app", "save_metadata"]

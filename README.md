@@ -16,7 +16,6 @@ pip install git+https://github.com/raphaelsty/kgsearch
 
 The `start` command starts the API and opens the user interface:
 
-
 ```sh
 kg start
 ```
@@ -30,6 +29,8 @@ The query `france;germany;china` will be divided into three subqueries `france`,
 The `top K` field allows selecting the number of candidate entities retrieved by the search engine (1 by default).
 
 The `neighbours` field selects the number of neighbors to be displayed (1 by default).
+
+The `prune` field removes entities that have fewer than `prune` connections to other entities (1 by default).
 
 ## 🤖 Custom KG
 
@@ -47,6 +48,23 @@ senegal,neighbor,mauritania
 senegal,neighbor,mali
 senegal,neighbor,guinea-bissau
 senegal,neighbor,guinea
+```
+
+We can also add custom metadata for each entity to be displayed in the user interface using `meta -f`:
+
+```sh
+kg meta -f metadata.json
+```
+
+where the `metadata.json` file has the label of the entity as a key and a set of characteristics:
+
+```json
+{
+  "senegal": {"url": "https://en.wikipedia.org/wiki/senegal"},
+  "gambia": {"url": "https://en.wikipedia.org/wiki/gambia"},
+  "mauritania": {"url": "https://en.wikipedia.org/wiki/gambia"},
+  "mali": {"url": "https://en.wikipedia.org/wiki/mali"},
+}
 ```
 
 ## 📑 Notes

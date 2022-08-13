@@ -4,7 +4,7 @@ import webbrowser
 import click
 from rich import print
 
-from .app import Search, create_app
+from .app import Search, create_app, save_metadata
 
 __all__ = ["app"]
 
@@ -29,6 +29,9 @@ def start(arg, f):
 
     elif arg == "add":
         Search(file=f).save(path=os.path.join(path, "data/search.pkl"))
+
+    elif arg == "meta":
+        save_metadata(origin=f, source=os.path.join(path, "data/metadata.json"))
 
     elif arg == "open":
         print("😎 Opening web.")
