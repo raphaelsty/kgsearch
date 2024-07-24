@@ -2,7 +2,7 @@ click == 8.1.7
 Flask == 3.0.3
 blinker == 1.8.2
 flask-cors == 4.0.1 
-requests == 2.27.1
+requests == 2.32.2
 cherche == 0.1.0
 pandas >= 1.4.2
 rich == 10.1.0
