@@ -5,3 +5,4 @@ requests == 2.27.1
 cherche == 0.1.0
 pandas >= 1.4.2
 rich == 10.1.0
+Werkzeug==2.2.2
