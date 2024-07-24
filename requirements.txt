@@ -1,8 +1,9 @@
-click == 8.0.1
-Flask == 2.0.1
+click == 8.1.7
+Flask == 3.0.3
+blinker == 1.8.2
 Flask-Cors == 3.0.10
 requests == 2.27.1
 cherche == 0.1.0
 pandas >= 1.4.2
 rich == 10.1.0
-Werkzeug==2.2.2
+Werkzeug==3.0.3
